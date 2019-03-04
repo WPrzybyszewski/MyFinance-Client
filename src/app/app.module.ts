@@ -1,18 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
+
+
 import { AppComponent } from './app.component';
+
+import {Oauth2RedirectComponent} from "./oauth2-redirect/oauth2-redirect.component";
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    Oauth2RedirectComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
+
   ],
-  providers: [],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
