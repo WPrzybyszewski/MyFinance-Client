@@ -8,13 +8,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import {Oauth2RedirectComponent} from "./oauth2-redirect/oauth2-redirect.component";
+import { TestComponentComponent } from './test-component/test-component.component';
+import { TransactionComponent } from './transaction/transaction.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    Oauth2RedirectComponent
+    Oauth2RedirectComponent,
+    TestComponentComponent,
+    TransactionComponent
   ],
   imports: [
     BrowserModule,
@@ -25,4 +29,6 @@ import {Oauth2RedirectComponent} from "./oauth2-redirect/oauth2-redirect.compone
   providers: [ ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}

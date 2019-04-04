@@ -9,10 +9,13 @@ import {ActivatedRoute} from "@angular/router";
 export class Oauth2RedirectComponent implements OnInit {
 
   constructor(private activeRoute: ActivatedRoute) {
+    console.log('construt');
   }
 
   ngOnInit() {
+    console.log('ngInit');
     const queryParams = this.activeRoute.snapshot.queryParams;
+
 
     const token = queryParams['token'];
 
