@@ -1,0 +1,64 @@
+
+<!--<div class="mat-app-background basic-container">-->
+<!--<mat-toolbar>-->
+  <span>{{tittle}}</span>
+<!--</mat-toolbar>-->
+<mat-card-content width="10%">
+  <form class="my-form"  width="10%">
+  <div>
+    <mat-form-field class="full-width">
+      <mat-label>First Name</mat-label>
+      <!--<input [(ngModel)]="user.name"  matInput  placeholder="First name"  name="fname"  required>-->
+      <input matInput  placeholder="First name" [(ngModel)]="signUpRequest.name"   name="fname"  required>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label>Last Name</mat-label>
+      <input   matInput  placeholder="Last Name" [(ngModel)]="signUpRequest.surname" name="surname"  required>
+    </mat-form-field>
+  </div>
+    <div>
+    <mat-form-field class="full-width">
+      <mat-label>Address</mat-label>
+      <input  matInput placeholder="Address" [(ngModel)]="signUpRequest.address" name="address" required>
+    </mat-form-field>
+    </div>
+
+    <div>
+    <mat-form-field class="full-width">
+      <mat-label>Email</mat-label>
+      <input  matInput  placeholder="Email"  [(ngModel)]="signUpRequest.email" name="email">
+    </mat-form-field>
+    </div>
+    <div>
+    <mat-form-field class="full-width">
+      <mat-label>Password</mat-label>
+      <input  matInput  placeholder="Password"  name="password">
+    </mat-form-field>
+
+      <p style="color: red"> {{message}} </p>
+    </div>
+
+    <button mat-raised-button  color="primary"  (click)="send()">SEND</button>
+    <button mat-raised-button  style="left:15%" color="primary" mat-dialog-close>Cancel</button>
+
+  </form>
+</mat-card-content>
+
+
+<!--</mat-dialog-content>-->
+<!--<div class="example-container">-->
+  <!--<mat-form-field>-->
+    <!--<input matInput placeholder="Input">-->
+  <!--</mat-form-field>-->
+
+  <!--<mat-form-field>-->
+    <!--<textarea matInput placeholder="Textarea"></textarea>-->
+  <!--</mat-form-field>-->
+
+  <!--<mat-form-field>-->
+    <!--&lt;!&ndash;<mat-select placeholder="Select">&ndash;&gt;-->
+      <!--&lt;!&ndash;&lt;!&ndash;<mat-option value="option">Option</mat-option>&ndash;&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;</mat-select>&ndash;&gt;-->
+  <!--</mat-form-field>-->
+<!--</div>-->

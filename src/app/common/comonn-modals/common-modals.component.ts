@@ -1,8 +1,9 @@
-import {Component, Inject, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup} from "@angular/forms";
-import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from "@angular/material";
-import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
-import {AbstractModal} from "../abstract-modal";
+import { Component, OnInit } from '@angular/core';
+import {MatDialog} from "@angular/material";
+
+
+
+
 @Component({
   selector: 'dialog-content-example-dialog',
   template: `
@@ -52,30 +53,31 @@ import {AbstractModal} from "../abstract-modal";
 })
 export class DialogContentExampleDialog {}
 
-
+const MODALS = {
+  testDialog: DialogContentExampleDialog,
+};
 
 @Component({
-  selector: 'app-transaction',
-  templateUrl: './transaction.component.html',
-  styleUrls: ['./transaction.component.css']
+  selector: 'app-comonn-modals',
+  templateUrl: './common-modals.component.html',
+  styleUrls: ['./common-modals.component.css']
 })
+export class CommonModalsComponent implements OnInit {
 
-export class TransactionComponent extends  AbstractModal{
-
-   MODALS = {
-    testDialog: DialogContentExampleDialog
-
-  };
-  constructor(public dialog: MatDialog) {super(dialog)
+  constructor(public dialog: MatDialog) {
   }
 
-  // openDialog(name: string) {
-  //   console.log('open Dialog ' + name);
-  //   const dialogRef = this.dialog.open(MODALS[name]);
-  //
-  //   dialogRef.afterClosed().subscribe(result => {
-  //     console.log(`Dialog result: ${result}`);
-  //   });
-  //  }
-}
+  openDialog(name: string) {
+    const dialogRef = this.dialog.open(MODALS[name]);
 
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+
+    ngOnInit()
+    {
+    }
+
+
+}

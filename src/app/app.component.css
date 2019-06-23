@@ -1,0 +1,7 @@
+.design  {
+  padding-left:25px;
+  background:url('src/assets/baseline_arrow_back_ios_black_18dp.png') no-repeat top left;
+  display: inline-block;
+  height: 35px;
+  width: 12px;
+}
